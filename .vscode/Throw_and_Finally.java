@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sql.rowset.spi.SyncResolver;
-import javax.swing.plaf.synth.SynthSpinnerUI;
 
 public class Throw_and_Finally {
     public static void main(String[] args) {
@@ -20,13 +18,14 @@ class Test1{
     void funn1(){
         System.out.println("Connection Established in class Test1");
         try{
-            Scanner sc=new Scanner(System.in);
-            System.out.println("Enter the Numerator: ");
-            int a=sc.nextInt();
-            System.out.println("Enter the Denominator: ");
-            int b=sc.nextInt();
-            int c=a/b;
-            System.out.println(c);
+            try (Scanner sc = new Scanner(System.in)) {
+                System.out.println("Enter the Numerator: ");
+                int a=sc.nextInt();
+                System.out.println("Enter the Denominator: ");
+                int b=sc.nextInt();
+                int c=a/b;
+                System.out.println(c);
+            }
         }
         catch(Exception as){
             System.out.println("Exception is handled in class Test1");

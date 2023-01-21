@@ -1,6 +1,6 @@
 public class LooseCoupling {
     public static void main(String[] args) {
-        CargoPlane cp=new CargoPlane(); /* In tight coupling class reference and onject reference is of same class  */
+        CargoPlane cp=new CargoPlane(); /* In loose coupling class reference and object reference is of parent class given to child class */
         //  ^                 ^
         //  |                 |
         // class ref        Object ref

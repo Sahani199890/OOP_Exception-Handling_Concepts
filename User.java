@@ -40,7 +40,7 @@ public class User {
 class UserBO{
     private User[] getUsers(){
         User[] users=new User[4];
-        users[0]=new User(1,"Abhishek","ABHI");
+        users[0]=new User(1,"Abhishek","BCIJ");
         users[1]=new User(2,"Abhi_Shani","923cboamxvfuh8");
         users[2]=new User(3,"Abhi","63rtvcdhas29ydh8");
         users[3]=new User(4,"Sahani","eghu29ydh8");
@@ -49,17 +49,17 @@ class UserBO{
     }
     private String encryptedPassword(String password){
         String res="";
-        for(int i=0;i<password.length();i++){
+        for(Integer i=0;i<password.length();i++){
             res+=(char)(password.charAt(i)+1);
         }
         return res;
     }
-    public boolean validate(String userName,String password){
+    public Boolean validate(String userName,String password){
         User[] user=getUsers();
-        for(int i=0;i<user.length;i++){
+        for(Integer i=0;i<user.length;i++){
             String un=user[i].getUserName();
             String pw=user[i].getPassword();
-            if(un.equals(userName) && pw.equals(password)){
+            if(un.equals(userName) && pw.equals(encryptedPassword(password))){
                 return true;
             }
         }

@@ -1,12 +1,12 @@
 
 
-/**what is going to exwcute firsstly is lets see now
+/**what is going to execute firstly is lets see now
 when 1st class gets into JVM then java looks for
 1.Static variables
 2.static blocks
 3.Main Method
 
-later when other classes been aded then java looks for
+later when other classes been added then java looks for
 1.Static variables
 2.static blocks
 

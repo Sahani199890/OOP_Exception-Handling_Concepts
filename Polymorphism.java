@@ -11,7 +11,9 @@ public class Polymorphism {
         Airport.permit(pp);
         Airport.permit(cp);
         Airport.permit(fp);
-
+        // Plane ref;
+        // ref=pp;
+        // ((PassangerPlane)(ref)).play();  // downcasting where parent clas ref is pointing to child class object
     }
 }
 class  Plane{
