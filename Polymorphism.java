@@ -28,12 +28,15 @@ class  Plane{
     }
 }
 class PassangerPlane extends Plane{
+    @Override
     void takeOff(){
         System.out.println("Passangerplane is taking off");
     }
+  @Override
     void fly(){
         System.out.println("Passangerplane is flying at medium altitude");
     }
+  @Override
     void land(){
         System.out.println("Passangerplane is landing");
     }
@@ -42,23 +45,29 @@ class PassangerPlane extends Plane{
     }
 }
 class CargoPlane extends Plane{
+    @Override
     void takeOff(){
         System.out.println("Cargoplane is taking off");        
     }
+    @Override
     void fly(){
         System.out.println("Cargoplane is flying at low altitude");
     }
+    @Override
     void land(){
         System.out.println("Cargoplane is landing");
     }
 }
 class FighterPlane extends Plane{
+    @Override
     void takeOff(){
         System.out.println("FighterPlane is taking off");        
     }
+    @Override
     void fly(){
         System.out.println("FighterPlane is flying at high altitude");
     }
+    @Override
     void land(){
         System.out.println("FighterPlane is landing");
     }
